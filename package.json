@@ -1,0 +1,19 @@
+{
+  "name": "food_delivery_app",
+  "version": "1.0.0",
+  "description": "it is a food delivery app like a swiggy and zomato",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html"
+  },
+  "author": "Himanshu Anand",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
