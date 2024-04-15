@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .app {
@@ -33,6 +34,7 @@
 }
 
 .nav-items > ul > li {
+
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -161,4 +163,8 @@
   padding: 0 20px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.errImg{
+  width: 72vw;
 }
