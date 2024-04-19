@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurant, setlistOfRestaurant] = useState([]);
@@ -33,6 +35,16 @@ const Body = () => {
   // if(listOfRestaurant.length === 0){
   //   return <Shimmer />
   // }
+
+  const onlineStatus = useOnlineStatus();
+
+  if(onlineStatus === false)
+    return (
+      <h1 className="offline_h1">
+      Ooppsss !!! You're Offline , try again
+    </h1>
+  ) 
+  
 
   //this is known as Conditional Rendering ---
 
@@ -76,7 +88,17 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filterRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link style={{
+            textDecoration: 'none',
+            color: '#000',
+          }}
+          key={restaurant.info.id} 
+          to={'/restaurants/' + restaurant.info.id}
+          >
+              <RestaurantCard  resData={restaurant} />
+          </Link>
+          
+        
         ))}
       </div>
     </div>

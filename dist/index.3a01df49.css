@@ -161,4 +161,28 @@
 .errImg {
   width: 72vw;
 }
+
+.about {
+  background-color: #dadada3f;
+  margin: 10px;
+  padding: 10px;
+}
+
+.user-card {
+  border: 2px solid #87ceeb;
+  margin: 10px;
+  padding: 20px;
+}
+
+.counterBtn {
+  cursor: pointer;
+  background-color: #a5ffa5;
+  margin: 5px;
+  padding: 5px;
+}
+
+.offline_h1 {
+  margin: 10px;
+  padding: 10px;
+}
 /*# sourceMappingURL=index.3a01df49.css.map */

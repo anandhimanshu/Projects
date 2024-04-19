@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <a href="https://www.linkedin.com/in/himanshu-anand-3486ab2b2/" target="_blank">
         ❤️<b>Himanshu Anand</b>
       </a>
-      &nbsp;&copy;{year} <b>AnshuBites</b>
+      &nbsp;&copy;{year} <Link to="/"><b>AnshuBites</b></Link>
     </div>
   );
 };

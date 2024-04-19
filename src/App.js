@@ -6,8 +6,22 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Error from "./components/Error";
-
+import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Shimmer from "./components/Shimmer";
+import { lazy, Suspense } from "react";
+
+// * Modularity is also known as:
+// * Chunking
+// * Code Splitting
+// * Dynamic Bundling
+// * Lazy Loading
+// * On-Demand Loading
+// * Dynamic Import
+
+const Instamart = lazy(()=> import ('./components/instamart'));
+
+
 
 const AppLayout = () => {
   return (
@@ -36,6 +50,18 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: '/instamart',
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
+      },
     ],
     errorElement: <Error />,
   },
@@ -44,4 +70,4 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
 
-//done untill and hour ep- 7;aa
+// ep- 8 - starting...

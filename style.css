@@ -168,3 +168,26 @@
 .errImg{
   width: 72vw;
 }
+
+.about{
+  background-color: #dadada3f;
+  padding: 10px;
+  margin: 10px;
+}
+.user-card{
+  padding: 20px;
+  border: 2px solid skyblue;
+  margin: 10px;
+}
+
+.counterBtn{
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(165, 255, 165);
+}
+
+.offline_h1{
+  padding: 10px;
+  margin: 10px;
+}
