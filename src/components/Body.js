@@ -7,11 +7,13 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [listOfRestaurant, setlistOfRestaurant] = useState([]);
 
-  const [filterRestaurant , setFilterRestaurant] = useState([]);
+  const [filterRestaurant, setFilterRestaurant] = useState([]);
 
   // Whenever the state variables updates, react trigger a reconciliation cycle(re-renders the component)...
 
   const [searchText, setSearchText] = useState("");
+
+    console.log(listOfRestaurant);
 
   useEffect(() => {
     fetchData();
@@ -29,7 +31,9 @@ const Body = () => {
     setlistOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setFilterRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilterRestaurant(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   // if(listOfRestaurant.length === 0){
@@ -38,13 +42,10 @@ const Body = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  if(onlineStatus === false)
+  if (onlineStatus === false)
     return (
-      <h1 className="offline_h1">
-      Ooppsss !!! You're Offline , try again
-    </h1>
-  ) 
-  
+      <h1 className="offline_h1">Ooppsss !!! You're Offline , try again</h1>
+    );
 
   //this is known as Conditional Rendering ---
 
@@ -52,9 +53,9 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="search-container">
+      <div className="flex justify-evenly items-center px-4 m-2 text-lg">
         <button
-          className="top-rated"
+          className="text-xl p-2 m-2 font-bold text-red-500 bg-gray-50"
           onClick={() => {
             const filteredList = listOfRestaurant.filter(
               (res) => res.info.avgRating >= 4.5
@@ -64,8 +65,9 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        <div>
         <input
-          className="search-box"
+          className=" border border-solid border-black w-70 text-lg px-4 rounded-lg"
           type="text"
           placeholder="Search Food or Restaurant"
           value={searchText}
@@ -73,7 +75,7 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
         />
-        <button
+        <button className="text-xl bg-gray-100 px-4 ml-3 font-semi-bold   rounded-lg"
           onClick={() => {
             // Filter the restaurant cards and update the UI ---
             const filteredRestaurant = listOfRestaurant.filter((data) =>
@@ -85,20 +87,21 @@ const Body = () => {
         >
           Search
         </button>
-      </div>
-      <div className="res-container">
-        {filterRestaurant.map((restaurant) => (
-          <Link style={{
-            textDecoration: 'none',
-            color: '#000',
-          }}
-          key={restaurant.info.id} 
-          to={'/restaurants/' + restaurant.info.id}
-          >
-              <RestaurantCard  resData={restaurant} />
-          </Link>
-          
+        </div>
         
+      </div>
+      <div className="flex justify-evenly items-center flex-wrap ">
+        {filterRestaurant.map((restaurant) => (
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "#000",
+            }}
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

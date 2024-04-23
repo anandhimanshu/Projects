@@ -8,15 +8,15 @@ export const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-gray-100 shadow-sm m-2">
       <div className="logo-container">
         <Link to="/">
-          <img src={logoSvg} alt="App Logo" className="logo" />
+          <img src={logoSvg} alt="App Logo" className="w-36 mx-4" />
         </Link>
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
+      <div className="flex items-center">
+        <ul className="flex  px-4 mx-4 gap-8 text-xl"> 
+          <li className="text-sm">Online Status: {onlineStatus ? "✅" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -29,7 +29,7 @@ export const Header = () => {
           <li>
             <Link to='/instamart'>Instamart</Link>
           </li>
-          <li>Cart</li>
+          <li><i class="ri-shopping-bag-4-fill"></i><span>(0)</span></li>
           <button
             className="login"
             onClick={() => {

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="footer">
+    <div className="text-center m-4 p-4 text-xl">
       Created By: 
       <i class="fa-solid fa-heart"></i>
       <a href="https://www.linkedin.com/in/himanshu-anand-3486ab2b2/" target="_blank">

@@ -1,101 +1,33 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { FiClock } from "react-icons/fi";
-import { AiOutlineStar } from "react-icons/ai";
-import useRestaurantMenu from "../utils/useRestaurantMenu";
+import useResMenu from "../utils/useRestaurantMenu"
 import { IMG_URL } from "../utils/constants"
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
+  const resInfo = useResMenu(resId); // Corrected hook usage
+  console.log(resInfo);
+  if (resInfo === null) return <h1>Loading</h1>;
 
-  const [resInfo] = useRestaurantMenu(resId);
-
-  if (resInfo === null) return <Shimmer />;
-
-  const {
-    name,
-    cuisines,
-    costForTwoMessage,
-    cloudinaryImageId,
-    avgRating,
-    deliveryTime,
-  } = resInfo?.data?.cards[2]?.card?.card?.info;
-
-  const { itemCards } =
-    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
-      ?.card?.card?.itemCards;
 
 
   return (
-    <div className="menu">
-      <header className="menu-header">
-        <div className="menu-header-left">
-          <img src={IMG_URL + cloudinaryImageId} alt="Restaurent Info" />
-        </div>
-        <div className="menu-header-right">
-          <div className="top">
-            <h1>{name}</h1>
-            <h3>{cuisines.join(", ")}</h3>
-          </div>
-          <div className="bottom">
-            <h4 className="avg-rating">
-              <span
-                className="icons"
-                style={{
-                  position: "relative",
-                  top: "2px",
-                  marginRight: "3px",
-                }}
-              >
-                <AiOutlineStar />
-              </span>
-              <span>{avgRating}</span>
-            </h4>
-            <h4 className="time">
-              <span
-                className="icons"
-                style={{
-                  position: "relative",
-                  top: "2px",
-                  marginRight: "3px",
-                }}
-              >
-                <FiClock />
-              </span>
-              <span> {deliveryTime} MINS</span>
-            </h4>
-            <h3>{costForTwoMessage}</h3>
-          </div>
-        </div>
-      </header>
-
-      <div className="menu-main">
-        <h2>Menu</h2>
-        <h3 className="items">{itemCards.length} items</h3>
-        <div className="menu-main-card-container">
-          {itemCards.map((item) => (
-            <div key={item.card.info.id} className="menu-card">
-              <div className="menu-card-left">
-                <h2 className="menu-name">{item.card.info.name}</h2>
-                <h3 className="menu-price">
-                  ₹
-                  {item.card.info.price / 100 ||
-                    item.card.info.defaultPrice / 100}
-                </h3>
-                <h4 className="menu-description">
-                  {item.card.info.description}
-                </h4>
-              </div>
-              <div className="menu-card-right">
-                <img src={IMG_URL + item.card.info.imageId} alt="Menu Info" />
-              </div>
-            </div>
-          ))}
-
-          {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-        </div>
+    <div>
+      <h1 className="m-4 font-bold text-3xl mx-6">Menu </h1>
+      <div className="flex justify-between items-center m-4 p-4">
+        <h2 className="text-2xl font-semibold">
+          Name: {resInfo?.data?.cards[2]?.card?.card?.info.name}
+        </h2>
+        <h3 className="p-4 m-6 font-semibold text-xl">
+          Cuisines: {resInfo?.data?.cards[2]?.card?.card?.info.cuisines}
+        </h3>
+        <img
+          className="w-32 rounded-lg"
+          src={
+            IMG_URL +
+            resInfo?.data?.cards[2]?.card?.card?.info.cloudinaryImageId
+          }
+        />
       </div>
     </div>
   );

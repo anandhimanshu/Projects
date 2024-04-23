@@ -12,9 +12,9 @@ class About extends Component {
   }
 
   render() {    return (
-      <div className="about">
-        <h1>About</h1>
-        <h2>This is a Namaste React WebSeries !!!</h2>
+      <div className="p-4 m-4">
+        <h1 className="text-5xl font-bold mb-4" >About</h1>
+        <h2 className="text-3xl font-semi-bold my-2">This is a Namaste React WebSeries !!!</h2>
 
         <UserClass
           name={"anshu"}
