@@ -11,7 +11,7 @@
     "react-router-dom": "^6.22.3"
   },
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel build index.html"
   },
   "devDependencies": {
     "postcss": "^8.4.38",
