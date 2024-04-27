@@ -7,7 +7,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useResMenu(resId); // Corrected hook usage
   console.log(resInfo);
-  if (resInfo === null) return <h1>Loading</h1>;
+  if (resInfo === null) return <Shimmer />;
 
 
 

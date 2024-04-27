@@ -34403,10 +34403,19 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _constants = require("../utils/constants");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 const RestaurantCard = (props)=>{
     const { resData } = props;
     const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } = resData?.info;
+    if (!resData) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 13,
+        columnNumber: 14
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "m-4 p-2 w-[250px] rounded-lg  ",
         style: {
@@ -34419,24 +34428,24 @@ const RestaurantCard = (props)=>{
                 alt: "Biryani"
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 21,
-                columnNumber: 9
+                lineNumber: 23,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 className: "text-lg font-bold mt-2 p-2 ",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 35,
-                columnNumber: 9
+                lineNumber: 28,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 className: "px-2",
                 children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 36,
-                columnNumber: 9
+                lineNumber: 29,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 className: "px-2",
@@ -34445,30 +34454,30 @@ const RestaurantCard = (props)=>{
                         class: "ri-star-s-fill"
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 37,
-                        columnNumber: 30
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined),
                     " ",
                     avgRating
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 37,
-                columnNumber: 9
+                lineNumber: 30,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 className: "px-2",
                 children: costForTwo
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 38,
-                columnNumber: 9
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantCard.js",
-        lineNumber: 15,
-        columnNumber: 7
+        lineNumber: 17,
+        columnNumber: 5
     }, undefined);
 };
 _c = RestaurantCard;
@@ -34481,7 +34490,7 @@ $RefreshReg$(_c, "RestaurantCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hB8jg":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Shimmer":"g6ZGj"}],"hB8jg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
@@ -34499,61 +34508,63 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
+        className: "shimmer-container grid gap-4 sm:grid-cols-2 lg:grid-cols-4",
         children: [
             ...Array(20)
         ].map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
+                className: "shimmer-card w-60 p-4 m-2 rounded-lg bg-gray-100",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-image"
+                        className: "shimmer-image h-40 bg-gray-200 mb-4"
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 6,
-                        columnNumber: 13
+                        lineNumber: 8,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "shimmer-details",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-name"
-                            }, void 0, false, {
-                                fileName: "src/components/Shimmer.js",
-                                lineNumber: 8,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-rating"
-                            }, void 0, false, {
-                                fileName: "src/components/Shimmer.js",
-                                lineNumber: 9,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-address"
+                                className: "shimmer-name h-4 bg-gray-200 mb-2"
                             }, void 0, false, {
                                 fileName: "src/components/Shimmer.js",
                                 lineNumber: 10,
-                                columnNumber: 15
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "shimmer-rating h-4 bg-gray-200 mb-2"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 11,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "shimmer-address h-4 bg-gray-200"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 12,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 7,
-                        columnNumber: 13
+                        lineNumber: 9,
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, index, true, {
                 fileName: "src/components/Shimmer.js",
-                lineNumber: 5,
-                columnNumber: 11
+                lineNumber: 7,
+                columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/Shimmer.js",
-        lineNumber: 3,
-        columnNumber: 7
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Shimmer;
@@ -34566,7 +34577,7 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34917,9 +34928,7 @@ const RestaurantMenu = ()=>{
     const { resId } = (0, _reactRouterDom.useParams)();
     const resInfo = (0, _useRestaurantMenuDefault.default)(resId); // Corrected hook usage
     console.log(resInfo);
-    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Loading"
-    }, void 0, false, {
+    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
         lineNumber: 10,
         columnNumber: 32
