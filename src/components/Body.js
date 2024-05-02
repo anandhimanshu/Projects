@@ -110,4 +110,4 @@ const Body = () => {
 
 export default Body;
 
-//final version , everything works fine... till ep - 6 completed
+//final version , everything works fine... till ep - 10 completed

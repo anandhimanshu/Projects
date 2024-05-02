@@ -2,7 +2,7 @@ import React from "react";
 
 const Shimmer = () => {
   return (
-    <div className="shimmer-container grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="shimmer-container ml-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {[...Array(20)].map((_, index) => (
         <div key={index} className="shimmer-card w-60 p-4 m-2 rounded-lg bg-gray-100">
           <div className="shimmer-image h-40 bg-gray-200 mb-4"></div>

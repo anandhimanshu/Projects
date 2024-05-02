@@ -1,7 +1,6 @@
-import React from 'react';
-import { IMG_URL } from '../utils/constants';
-import Shimmer from './Shimmer';
-
+import React from "react";
+import { IMG_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
@@ -9,9 +8,9 @@ const RestaurantCard = (props) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
     resData?.info;
 
-    if (!resData) {
-      return <Shimmer />;
-    }
+  if (!resData) {
+    return <Shimmer />;
+  }
 
   return (
     <div
