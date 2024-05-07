@@ -14,22 +14,32 @@ const RestaurantCard = (props) => {
 
   return (
     <div
-      className="m-4 p-2 w-[250px] rounded-lg  "
+      className="m-4 p-2 w-[300px] h-[350px] rounded-lg overflow-hidden flex flex-col justify-between transition duration-200 hover:scale-105"
       style={{
         backgroundColor: "#f0f0f0",
       }}
     >
-      <img
-        className="rounded-lg"
-        src={IMG_URL + cloudinaryImageId}
-        alt="Biryani"
-      />
-      <h3 className="text-lg font-bold mt-2 p-2 ">{name}</h3>
-      <h4 className="px-2">{cuisines.join(", ")}</h4>
-      <h4 className="px-2">
-        <i class="ri-star-s-fill"></i> {avgRating}
-      </h4>
-      <h4 className="px-2">{costForTwo}</h4>
+      <div style={{ height: "60%" }}>
+        <img
+          className="rounded-lg w-full h-full object-cover"
+          src={IMG_URL + cloudinaryImageId}
+          alt="Biryani"
+        />
+      </div>
+      <div className="p-2" style={{ height: "40%" }}>
+        <h3 className="text-lg font-bold mb-1 overflow-hidden overflow-ellipsis">
+          {name}
+        </h3>
+        <h4 className="mb-1 overflow-hidden overflow-ellipsis">
+          {cuisines.join(", ")}
+        </h4>
+        <div className="flex justify-between">
+          <h4>
+            <i className="ri-star-s-fill"></i> {avgRating}
+          </h4>
+          <h4>{costForTwo}</h4>
+        </div>
+      </div>
     </div>
   );
 };

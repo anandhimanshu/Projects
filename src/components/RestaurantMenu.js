@@ -1,23 +1,21 @@
-import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useResMenu from "../utils/useRestaurantMenu";
-// import { IMG_URL } from "../utils/constants";
+import { IMG_URL } from "../utils/constants";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
+import ResCategoryShimmer from "./ResCategoryShimmer";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useResMenu(resId); // Corrected hook usage
-  // console.log(resInfo);
-  if (resInfo === null) return <Shimmer />;
+  console.log(resInfo);
 
-  const { name, cuisines, costForTwoMessage } =
+  const [showIndex, setShowIndex] = useState(0);
+
+  if (resInfo === null) return <ResCategoryShimmer />;
+
+  const { name, cuisines, costForTwoMessage, cloudinaryImageId } =
     resInfo?.data?.cards[2]?.card?.card?.info;
-
-  const { itemCards } =
-    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      .card?.itemCards;
-
-  //  console.log(resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 
   const categories =
     resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -26,36 +24,28 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  // console.log(categories);
-
   return (
-    // <div>
-    //   <h1 className="m-4 text-center font-bold text-3xl mx-6">Restaurant Info </h1>
-    //   <div className="flex justify-between items-center m-4 p-4">
-    //     <h2 className="text-2xl font-semibold">
-    //       Name: {resInfo?.data?.cards[2]?.card?.card?.info.name}
-    //     </h2>
-    //     <h3 className="p-4 m-6 font-semibold text-xl">
-    //       Cuisines: {resInfo?.data?.cards[2]?.card?.card?.info.cuisines}
-    //     </h3>
-    //     <img
-    //       className="w-32 rounded-lg"
-    //       src={
-    //         IMG_URL +
-    //         resInfo?.data?.cards[2]?.card?.card?.info.cloudinaryImageId
-    //       }
-    //     />
-    //   </div>
-    // </div>
-    <div className="text-center ">
-      <h1 className="font-bold my-6 text-2xl">{name}</h1>
-      <p className="font-bold text-lg">
-        {cuisines.join(", ")} - {costForTwoMessage};
-      </p>
-      {/**categories accordian */}
-      {categories.map((category)=>(
-        <RestaurantCategory data={category?.card?.card} />
-      ))}
+    <div>
+      <div className="border border-gray-300 bg-gray-100 rounded-lg p-4 w-100%  mb-6 flex items-center justify-between mx-[150px]">
+        <h1 className="text-4xl font-bold mr-4">{name}</h1>
+        <div>
+          <p className="text-gray-700 text-lg font-semibold">{cuisines.join(", ")}</p>
+          <p className="text-gray-700 text-lg font-semibold">{costForTwoMessage}</p>
+        </div>
+        <img className="w-28 rounded-lg" src={IMG_URL + cloudinaryImageId} alt="" />
+      </div>
+
+      <div className="text-center">
+        {/**categories accordian */}
+        {categories.map((category, index) => (
+          <RestaurantCategory
+            key={category?.card?.card?.title}
+            data={category?.card?.card}
+            showItems={index === showIndex ? true : false}
+            setShowIndex={() => setShowIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

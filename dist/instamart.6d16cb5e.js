@@ -614,30 +614,110 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const Instamart = ()=>{
+    _s();
+    const [products, setProducts] = (0, _react.useState)([]);
+    // Fetching demo API data
+    (0, _react.useEffect)(()=>{
+        // Replace this URL with your actual API endpoint
+        fetch("https://api.example.com/products").then((response)=>response.json()).then((data)=>setProducts(data)).catch((error)=>console.log("Error fetching data:", error));
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container mx-auto px-4 py-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Hey, Welcome to Instamart, "
+                className: "text-3xl font-bold mb-4",
+                children: "Hey, Welcome to Instamart"
             }, void 0, false, {
                 fileName: "src/components/instamart.js",
-                lineNumber: 4,
-                columnNumber: 13
+                lineNumber: 17,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl font-semibold mb-8",
                 children: "Order Groceries Now !!!"
             }, void 0, false, {
                 fileName: "src/components/instamart.js",
-                lineNumber: 5,
-                columnNumber: 13
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
+                children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "bg-white rounded-lg shadow-md p-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: product.image,
+                                alt: product.name,
+                                className: "w-full h-48 object-cover rounded-md mb-4"
+                            }, void 0, false, {
+                                fileName: "src/components/instamart.js",
+                                lineNumber: 22,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                className: "text-lg font-semibold",
+                                children: product.name
+                            }, void 0, false, {
+                                fileName: "src/components/instamart.js",
+                                lineNumber: 23,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-gray-600",
+                                children: product.description
+                            }, void 0, false, {
+                                fileName: "src/components/instamart.js",
+                                lineNumber: 24,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mt-4 flex justify-between items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "text-blue-500 font-semibold",
+                                        children: product.price
+                                    }, void 0, false, {
+                                        fileName: "src/components/instamart.js",
+                                        lineNumber: 26,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300",
+                                        children: "Add to Cart"
+                                    }, void 0, false, {
+                                        fileName: "src/components/instamart.js",
+                                        lineNumber: 27,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/instamart.js",
+                                lineNumber: 25,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, product.id, true, {
+                        fileName: "src/components/instamart.js",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/instamart.js",
+                lineNumber: 19,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/instamart.js",
-        lineNumber: 3,
-        columnNumber: 9
+        lineNumber: 16,
+        columnNumber: 5
     }, undefined);
 };
+_s(Instamart, "f86L6rLANGURv6GE6gupp7+oOp4=");
 _c = Instamart;
 exports.default = Instamart;
 var _c;
@@ -648,6 +728,6 @@ $RefreshReg$(_c, "Instamart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["7xnlX","1xC6H"], null, "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["7xnlX","1xC6H"], null, "parcelRequire94c2")
 
 //# sourceMappingURL=instamart.6d16cb5e.js.map

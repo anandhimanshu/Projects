@@ -34417,60 +34417,88 @@ const RestaurantCard = (props)=>{
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "m-4 p-2 w-[250px] rounded-lg  ",
+        className: "m-4 p-2 w-[300px] h-[350px] rounded-lg overflow-hidden flex flex-col justify-between transition duration-200 hover:scale-105",
         style: {
             backgroundColor: "#f0f0f0"
         },
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "rounded-lg",
-                src: (0, _constants.IMG_URL) + cloudinaryImageId,
-                alt: "Biryani"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    height: "60%"
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "rounded-lg w-full h-full object-cover",
+                    src: (0, _constants.IMG_URL) + cloudinaryImageId,
+                    alt: "Biryani"
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
                 lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                className: "text-lg font-bold mt-2 p-2 ",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                className: "px-2",
-                children: cuisines.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 28,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                className: "px-2",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-2",
+                style: {
+                    height: "40%"
+                },
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                        class: "ri-star-s-fill"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "text-lg font-bold mb-1 overflow-hidden overflow-ellipsis",
+                        children: name
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
                         lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
-                    " ",
-                    avgRating
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        className: "mb-1 overflow-hidden overflow-ellipsis",
+                        children: cuisines.join(", ")
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCard.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        className: "ri-star-s-fill"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurantCard.js",
+                                        lineNumber: 38,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    " ",
+                                    avgRating
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurantCard.js",
+                                lineNumber: 37,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: costForTwo
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCard.js",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantCard.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
                 lineNumber: 29,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                className: "px-2",
-                children: costForTwo
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
@@ -34512,47 +34540,74 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container ml-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4",
+        className: "shimmer-container ml-4 mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4",
         children: [
             ...Array(20)
         ].map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-60 p-4 m-2 rounded-lg bg-gray-100",
+                className: "shimmer-card w-[300px] h-[350px] p-2 rounded-lg overflow-hidden flex flex-col justify-between transition duration-200 hover:scale-105 relative shadow-md",
+                style: {
+                    backgroundColor: "#f0f0f0",
+                    border: "1px solid #ddd"
+                },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-image h-40 bg-gray-200 mb-4"
+                        className: "animate-pulse",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "shimmer-image h-40 w-full bg-gray-200 mb-4 gliding"
+                        }, void 0, false, {
+                            fileName: "src/components/Shimmer.js",
+                            lineNumber: 16,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 8,
+                        lineNumber: 15,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-details",
+                        className: "p-4",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-name h-4 bg-gray-200 mb-2"
+                                className: "shimmer-name h-6 bg-gray-200 mb-2 gliding"
                             }, void 0, false, {
                                 fileName: "src/components/Shimmer.js",
-                                lineNumber: 10,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-rating h-4 bg-gray-200 mb-2"
+                                className: "shimmer-cuisines h-4 bg-gray-200 mb-2 gliding"
                             }, void 0, false, {
                                 fileName: "src/components/Shimmer.js",
-                                lineNumber: 11,
+                                lineNumber: 20,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-address h-4 bg-gray-200"
-                            }, void 0, false, {
+                                className: "flex justify-between",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "shimmer-rating h-4 bg-gray-200 gliding"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Shimmer.js",
+                                        lineNumber: 22,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "shimmer-cost h-4 bg-gray-200 gliding"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Shimmer.js",
+                                        lineNumber: 23,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Shimmer.js",
-                                lineNumber: 12,
+                                lineNumber: 21,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 9,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -34663,39 +34718,184 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _contactUsPng = require("../utils/Contact-Us.png");
 var _contactUsPngDefault = parcelHelpers.interopDefault(_contactUsPng);
+var _s = $RefreshSig$();
 const Contact = ()=>{
+    _s();
+    const [formData, setFormData] = (0, _react.useState)({
+        name: "",
+        email: "",
+        message: ""
+    });
+    const handleChange = (e)=>{
+        const { name, value } = e.target;
+        setFormData((prevData)=>({
+                ...prevData,
+                [name]: value
+            }));
+    };
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        // Here you can handle the form submission logic, like sending the data to your backend
+        console.log("Form submitted:", formData);
+        // Clear the form fields after submission
+        setFormData({
+            name: "",
+            email: "",
+            message: ""
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container mx-auto p-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _contactUsPngDefault.default)
+                src: (0, _contactUsPngDefault.default),
+                alt: "Contact Us",
+                className: "mx-auto mb-8"
             }, void 0, false, {
                 fileName: "src/components/Contact.js",
-                lineNumber: 6,
-                columnNumber: 13
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "This is a Contact Us Page"
+                className: "text-3xl font-bold mb-4",
+                children: "Contact Us"
             }, void 0, false, {
                 fileName: "src/components/Contact.js",
-                lineNumber: 7,
-                columnNumber: 13
+                lineNumber: 34,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl font-semibold mb-8",
                 children: "Contact us on Our Official Email"
             }, void 0, false, {
                 fileName: "src/components/Contact.js",
-                lineNumber: 8,
-                columnNumber: 13
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                onSubmit: handleSubmit,
+                className: "max-w-lg mx-auto",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                htmlFor: "name",
+                                className: "block text-gray-700 font-medium mb-2",
+                                children: "Name"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                id: "name",
+                                name: "name",
+                                value: formData.name,
+                                onChange: handleChange,
+                                placeholder: "Enter your name",
+                                className: "w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Contact.js",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                htmlFor: "email",
+                                className: "block text-gray-700 font-medium mb-2",
+                                children: "Email"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "email",
+                                id: "email",
+                                name: "email",
+                                value: formData.email,
+                                onChange: handleChange,
+                                placeholder: "Enter your email",
+                                className: "w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 55,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Contact.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mb-6",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                htmlFor: "message",
+                                className: "block text-gray-700 font-medium mb-2",
+                                children: "Message"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 66,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                                id: "message",
+                                name: "message",
+                                value: formData.message,
+                                onChange: handleChange,
+                                placeholder: "Enter your message",
+                                rows: "4",
+                                className: "w-full px-4 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:border-blue-500"
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 69,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Contact.js",
+                        lineNumber: 65,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        type: "submit",
+                        className: "w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/Contact.js",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Contact.js",
+                lineNumber: 36,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Contact.js",
-        lineNumber: 5,
-        columnNumber: 9
+        lineNumber: 32,
+        columnNumber: 5
     }, undefined);
 };
+_s(Contact, "VNeJp0amD7roUEHfyWhlUZvpLKM=");
 _c = Contact;
 exports.default = Contact;
 var _c;
@@ -34706,7 +34906,7 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/Contact-Us.png":"711JQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"711JQ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/Contact-Us.png":"711JQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"711JQ":[function(require,module,exports) {
 module.exports = require("9b5ceecdcfbe24b").getBundleURL("aXMci") + "Contact-Us.3f51cb2c.png" + "?" + Date.now();
 
 },{"9b5ceecdcfbe24b":"lgJ39"}],"9R1Eu":[function(require,module,exports) {
@@ -34916,87 +35116,105 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _reactRouterDom = require("react-router-dom");
 var _useRestaurantMenu = require("../utils/useRestaurantMenu");
 var _useRestaurantMenuDefault = parcelHelpers.interopDefault(_useRestaurantMenu);
-// import { IMG_URL } from "../utils/constants";
+var _constants = require("../utils/constants");
 var _restaurantCategory = require("./RestaurantCategory");
 var _restaurantCategoryDefault = parcelHelpers.interopDefault(_restaurantCategory);
+var _react = require("react");
+var _resCategoryShimmer = require("./ResCategoryShimmer");
+var _resCategoryShimmerDefault = parcelHelpers.interopDefault(_resCategoryShimmer);
 var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
     const resInfo = (0, _useRestaurantMenuDefault.default)(resId); // Corrected hook usage
-    // console.log(resInfo);
-    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+    console.log(resInfo);
+    const [showIndex, setShowIndex] = (0, _react.useState)(0);
+    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCategoryShimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 11,
+        lineNumber: 15,
         columnNumber: 32
     }, undefined);
-    const { name, cuisines, costForTwoMessage } = resInfo?.data?.cards[2]?.card?.card?.info;
-    const { itemCards } = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card.card?.itemCards;
-    //  console.log(resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    const { name, cuisines, costForTwoMessage, cloudinaryImageId } = resInfo?.data?.cards[2]?.card?.card?.info;
     const categories = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    // console.log(categories);
-    return(// <div>
-    //   <h1 className="m-4 text-center font-bold text-3xl mx-6">Restaurant Info </h1>
-    //   <div className="flex justify-between items-center m-4 p-4">
-    //     <h2 className="text-2xl font-semibold">
-    //       Name: {resInfo?.data?.cards[2]?.card?.card?.info.name}
-    //     </h2>
-    //     <h3 className="p-4 m-6 font-semibold text-xl">
-    //       Cuisines: {resInfo?.data?.cards[2]?.card?.card?.info.cuisines}
-    //     </h3>
-    //     <img
-    //       className="w-32 rounded-lg"
-    //       src={
-    //         IMG_URL +
-    //         resInfo?.data?.cards[2]?.card?.card?.info.cloudinaryImageId
-    //       }
-    //     />
-    //   </div>
-    // </div>
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "text-center ",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-bold my-6 text-2xl",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 51,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "font-bold text-lg",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "border border-gray-300 bg-gray-100 rounded-lg p-4 w-100%  mb-6 flex items-center justify-between mx-[150px]",
                 children: [
-                    cuisines.join(", "),
-                    " - ",
-                    costForTwoMessage,
-                    ";"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-4xl font-bold mr-4",
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-gray-700 text-lg font-semibold",
+                                children: cuisines.join(", ")
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-gray-700 text-lg font-semibold",
+                                children: costForTwoMessage
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 33,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "w-28 rounded-lg",
+                        src: (0, _constants.IMG_URL) + cloudinaryImageId,
+                        alt: ""
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 52,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
-            categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
-                    data: category?.card?.card
-                }, void 0, false, {
-                    fileName: "src/components/RestaurantMenu.js",
-                    lineNumber: 57,
-                    columnNumber: 9
-                }, undefined))
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center",
+                children: categories.map((category, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                        data: category?.card?.card,
+                        showItems: index === showIndex ? true : false,
+                        setShowIndex: ()=>setShowIndex(index)
+                    }, category?.card?.card?.title, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/RestaurantMenu.js",
+                lineNumber: 38,
+                columnNumber: 7
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 50,
+        lineNumber: 28,
         columnNumber: 5
-    }, undefined));
+    }, undefined);
 };
-_s(RestaurantMenu, "Cey+a7ARFOvdFCQoEISIpGTlpdk=", false, function() {
+_s(RestaurantMenu, "xghfzYplaSwkWgggCcmN0YMFWmI=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useRestaurantMenuDefault.default)
@@ -35012,7 +35230,7 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","../utils/useRestaurantMenu":"fMOkH","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMOkH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../utils/useRestaurantMenu":"fMOkH","./RestaurantCategory":"K7XHe","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ResCategoryShimmer":"iEccl","../utils/constants":"hB8jg"}],"fMOkH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$253c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35055,16 +35273,21 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
-const RestaurantCategory = ({ data })=>{
-    //   console.log(data);
+const RestaurantCategory = ({ data, showItems, setShowIndex })=>{
+    const handleClick = ()=>{
+        setShowIndex(); // Assuming this function toggles the showItems state
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 ",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-between",
+                    className: "flex justify-between cursor-pointer",
+                    onClick: handleClick,
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             className: "font-bold text-lg",
@@ -35076,38 +35299,44 @@ const RestaurantCategory = ({ data })=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantCategory.js",
-                            lineNumber: 10,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: "\u2B07\uFE0F"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "ri-arrow-down-s-line"
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCategory.js",
+                                lineNumber: 16,
+                                columnNumber: 17
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantCategory.js",
-                            lineNumber: 13,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestaurantCategory.js",
-                    lineNumber: 9,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+                showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
                     items: data.itemCards
                 }, void 0, false, {
                     fileName: "src/components/RestaurantCategory.js",
-                    lineNumber: 16,
-                    columnNumber: 9
+                    lineNumber: 19,
+                    columnNumber: 23
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RestaurantCategory.js",
-            lineNumber: 8,
+            lineNumber: 11,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/RestaurantCategory.js",
-        lineNumber: 6,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -35121,7 +35350,7 @@ $RefreshReg$(_c, "RestaurantCategory");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ItemList":"kZjho","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZjho":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ItemList":"kZjho","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZjho":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1342 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35133,7 +35362,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utils/constants");
 const ItemList = ({ items })=>{
-    console.log(items);
+    // console.log(items);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: items.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "p-2 m-2 border-b-2 border-gray-200 text-left flex justify-between items-center",
@@ -35191,11 +35420,11 @@ const ItemList = ({ items })=>{
                                 className: "absolute",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "p-2 rounded-lg bg-green-100 bg-opacity-50 text-black shadow-lg ",
-                                    children: " Add +"
+                                    children: "Add +"
                                 }, void 0, false, {
                                     fileName: "src/components/ItemList.js",
                                     lineNumber: 27,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ItemList.js",
@@ -35206,7 +35435,7 @@ const ItemList = ({ items })=>{
                                 src: (0, _constants.IMG_URL) + item.card.info.imageId
                             }, void 0, false, {
                                 fileName: "src/components/ItemList.js",
-                                lineNumber: 29,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -35237,7 +35466,158 @@ $RefreshReg$(_c, "ItemList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l3N6g":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iEccl":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cb81 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cb81.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const ResCategoryShimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex justify-center",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "max-w-2xl w-full",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "p-4 m-2 border-b-2 border-gray-200 text-left flex justify-between items-center animate-pulse bg-gray-200 rounded-md",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-4/5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-300 h-4 w-full block mb-1"
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCategoryShimmer.js",
+                                    lineNumber: 9,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-300 h-3 w-2/3"
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCategoryShimmer.js",
+                                    lineNumber: 10,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ResCategoryShimmer.js",
+                            lineNumber: 8,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-1/5 p-4",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-300 h-12 w-full"
+                            }, void 0, false, {
+                                fileName: "src/components/ResCategoryShimmer.js",
+                                lineNumber: 13,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ResCategoryShimmer.js",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ResCategoryShimmer.js",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined),
+                [
+                    ...Array(5)
+                ].map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "p-2 m-2 border-b-2 border-gray-200 text-left flex justify-between items-center animate-pulse",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "w-10/12",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "py-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "bg-gray-200 h-4 w-full block mb-1"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ResCategoryShimmer.js",
+                                                lineNumber: 23,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "bg-gray-200 h-4 w-3/4 block"
+                                            }, void 0, false, {
+                                                fileName: "src/components/ResCategoryShimmer.js",
+                                                lineNumber: 24,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/ResCategoryShimmer.js",
+                                        lineNumber: 22,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-xs bg-gray-200 h-3 w-full"
+                                    }, void 0, false, {
+                                        fileName: "src/components/ResCategoryShimmer.js",
+                                        lineNumber: 26,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ResCategoryShimmer.js",
+                                lineNumber: 21,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "w-2/12 p-4",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "p-2 rounded-lg bg-green-100 bg-opacity-50 text-black shadow-lg bg-gray-200",
+                                    children: "Add +"
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCategoryShimmer.js",
+                                    lineNumber: 29,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/ResCategoryShimmer.js",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, index, true, {
+                        fileName: "src/components/ResCategoryShimmer.js",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, undefined))
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ResCategoryShimmer.js",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/ResCategoryShimmer.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ResCategoryShimmer;
+exports.default = ResCategoryShimmer;
+var _c;
+$RefreshReg$(_c, "ResCategoryShimmer");
+
+  $parcel$ReactRefreshHelpers$cb81.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l3N6g":[function(require,module,exports) {
 module.exports = require("289f36363251300c")(require("4cbee4cac5c2163d").getBundleURL("aXMci") + "instamart.6d16cb5e.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
