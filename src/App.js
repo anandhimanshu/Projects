@@ -10,6 +10,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
 import { lazy, Suspense } from "react";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // * Modularity is also known as:
 // * Chunking
@@ -26,9 +29,11 @@ const Instamart = lazy(()=> import ('./components/instamart'));
 const AppLayout = () => {
   return (
     <React.Fragment>
+      <Provider store={appStore}>
       <Header />
       <Outlet />
       <Footer />
+      </Provider>
     </React.Fragment>
   );
 };
@@ -62,6 +67,10 @@ const appRouter = createBrowserRouter([
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
       },
+      {
+        path: "/cart",
+        element: <Cart />
+      }
     ],
     errorElement: <Error />,
   },

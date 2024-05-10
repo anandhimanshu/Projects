@@ -8,7 +8,7 @@ import ResCategoryShimmer from "./ResCategoryShimmer";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useResMenu(resId); // Corrected hook usage
-  console.log(resInfo);
+  // console.log(resInfo);
 
   const [showIndex, setShowIndex] = useState(0);
 

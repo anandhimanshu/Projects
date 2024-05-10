@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
 
   return (
     <div
-      className="m-4 p-2 w-[300px] h-[350px] rounded-lg overflow-hidden flex flex-col justify-between transition duration-200 hover:scale-105"
+      className="m-4 p-2 w-[300px] h-[380px] rounded-lg overflow-hidden flex flex-col justify-between transition duration-200 hover:scale-105"
       style={{
         backgroundColor: "#f0f0f0",
       }}
