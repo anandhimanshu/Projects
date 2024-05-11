@@ -23,7 +23,7 @@ const Cart = () => {
         </button>
         {cartItems.length === 0 && (
           <>
-            <div className="mt-4"></div> {/* Add margin */}
+            <div className="mt-4"></div>
             <img
               className="w-[350px] h-[350px] mx-auto"
               src={emptyCart}

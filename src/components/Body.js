@@ -9,11 +9,7 @@ const Body = () => {
 
   const [filterRestaurant, setFilterRestaurant] = useState([]);
 
-  // Whenever the state variables updates, react trigger a reconciliation cycle(re-renders the component)...
-
   const [searchText, setSearchText] = useState("");
-
-    console.log(listOfRestaurant);
 
   useEffect(() => {
     fetchData();
@@ -26,8 +22,6 @@ const Body = () => {
 
     const json = await info.json();
 
-    //Optional Chaining -
-
     setlistOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -36,18 +30,12 @@ const Body = () => {
     );
   };
 
-  // if(listOfRestaurant.length === 0){
-  //   return <Shimmer />
-  // }
-
   const onlineStatus = useOnlineStatus();
 
   if (onlineStatus === false)
     return (
       <h1 className="offline_h1">Ooppsss !!! You're Offline , try again</h1>
     );
-
-  //this is known as Conditional Rendering ---
 
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
@@ -66,29 +54,28 @@ const Body = () => {
           Top Rated Restaurant
         </button>
         <div>
-        <input
-          className=" border border-solid border-black w-70 text-lg px-4 rounded-lg"
-          type="text"
-          placeholder="Search Food or Restaurant"
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
-        />
-        <button className="text-xl bg-gray-100 px-4 ml-3 font-semi-bold   rounded-lg"
-          onClick={() => {
-            // Filter the restaurant cards and update the UI ---
-            const filteredRestaurant = listOfRestaurant.filter((data) =>
-              data.info.name.toLowerCase().includes(searchText.toLowerCase())
-            );
+          <input
+            className=" border border-solid border-black w-70 text-lg px-4 rounded-lg"
+            type="text"
+            placeholder="Search Food or Restaurant"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="text-xl bg-gray-100 px-4 ml-3 font-semi-bold   rounded-lg"
+            onClick={() => {
+              const filteredRestaurant = listOfRestaurant.filter((data) =>
+                data.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
 
-            setFilterRestaurant(filteredRestaurant);
-          }}
-        >
-          Search
-        </button>
+              setFilterRestaurant(filteredRestaurant);
+            }}
+          >
+            Search
+          </button>
         </div>
-        
       </div>
       <div className="flex justify-evenly items-center flex-wrap ">
         {filterRestaurant.map((restaurant) => (
@@ -109,5 +96,3 @@ const Body = () => {
 };
 
 export default Body;
-
-//final version , everything works fine... till ep - 10 completed

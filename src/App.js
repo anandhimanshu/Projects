@@ -14,25 +14,15 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 
-// * Modularity is also known as:
-// * Chunking
-// * Code Splitting
-// * Dynamic Bundling
-// * Lazy Loading
-// * On-Demand Loading
-// * Dynamic Import
-
-const Instamart = lazy(()=> import ('./components/instamart'));
-
-
+const Instamart = lazy(() => import("./components/instamart"));
 
 const AppLayout = () => {
   return (
     <React.Fragment>
       <Provider store={appStore}>
-      <Header />
-      <Outlet />
-      <Footer />
+        <Header />
+        <Outlet />
+        <Footer />
       </Provider>
     </React.Fragment>
   );
@@ -56,7 +46,7 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: '/instamart',
+        path: "/instamart",
         element: (
           <Suspense fallback={<Shimmer />}>
             <Instamart />
@@ -69,8 +59,8 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />
-      }
+        element: <Cart />,
+      },
     ],
     errorElement: <Error />,
   },
@@ -78,5 +68,3 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
-
-// ep- 8 - starting...

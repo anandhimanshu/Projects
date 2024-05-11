@@ -5,26 +5,26 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle the form submission logic, like sending the data to your backend
+
     console.log("Form submitted:", formData);
-    // Clear the form fields after submission
+
     setFormData({
       name: "",
       email: "",
-      message: ""
+      message: "",
     });
   };
 
@@ -32,10 +32,15 @@ const Contact = () => {
     <div className="container mx-auto p-8">
       <img src={contactPng} alt="Contact Us" className="mx-auto mb-8" />
       <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-      <h2 className="text-xl font-semibold mb-8">Contact us on Our Official Email</h2>
+      <h2 className="text-xl font-semibold mb-8">
+        Contact us on Our Official Email
+      </h2>
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
         <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+          <label
+            htmlFor="name"
+            className="block text-gray-700 font-medium mb-2"
+          >
             Name
           </label>
           <input
@@ -49,7 +54,10 @@ const Contact = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+          <label
+            htmlFor="email"
+            className="block text-gray-700 font-medium mb-2"
+          >
             Email
           </label>
           <input
@@ -63,7 +71,10 @@ const Contact = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+          <label
+            htmlFor="message"
+            className="block text-gray-700 font-medium mb-2"
+          >
             Message
           </label>
           <textarea

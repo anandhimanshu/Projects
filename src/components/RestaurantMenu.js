@@ -7,8 +7,7 @@ import ResCategoryShimmer from "./ResCategoryShimmer";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const resInfo = useResMenu(resId); // Corrected hook usage
-  // console.log(resInfo);
+  const resInfo = useResMenu(resId);
 
   const [showIndex, setShowIndex] = useState(0);
 
@@ -29,14 +28,21 @@ const RestaurantMenu = () => {
       <div className="border border-gray-300 bg-gray-100 rounded-lg p-4 w-100%  mb-6 flex items-center justify-between mx-[150px]">
         <h1 className="text-4xl font-bold mr-4">{name}</h1>
         <div>
-          <p className="text-gray-700 text-lg font-semibold">{cuisines.join(", ")}</p>
-          <p className="text-gray-700 text-lg font-semibold">{costForTwoMessage}</p>
+          <p className="text-gray-700 text-lg font-semibold">
+            {cuisines.join(", ")}
+          </p>
+          <p className="text-gray-700 text-lg font-semibold">
+            {costForTwoMessage}
+          </p>
         </div>
-        <img className="w-28 rounded-lg" src={IMG_URL + cloudinaryImageId} alt="" />
+        <img
+          className="w-28 rounded-lg"
+          src={IMG_URL + cloudinaryImageId}
+          alt=""
+        />
       </div>
 
       <div className="text-center">
-        {/**categories accordian */}
         {categories.map((category, index) => (
           <RestaurantCategory
             key={category?.card?.card?.title}

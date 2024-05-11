@@ -5,7 +5,7 @@ class UserClass extends React.Component {
     super(props);
 
     this.state = {
-      userInfo: {}
+      userInfo: {},
     };
   }
 
@@ -15,19 +15,18 @@ class UserClass extends React.Component {
     const json = await data.json();
 
     this.setState({
-      userInfo: json
+      userInfo: json,
     });
   }
 
   render() {
-    
     const { name, bio, avatar_url } = this.state.userInfo;
     return (
       <div className="">
         <img className="py-2 my-2" src={avatar_url} />
         <h2 className="text-2xl font-bold">Name: {name}</h2>
         <h3 className="text-xl font-semi-bold">Bio: {bio}</h3>
-        <h4>Email: someone@gmail.com</h4>
+        <h4>anshuhim001@gmail.com</h4>
       </div>
     );
   }

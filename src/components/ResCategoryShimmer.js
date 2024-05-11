@@ -26,7 +26,9 @@ const ResCategoryShimmer = () => {
               <div className="text-xs bg-gray-200 h-3 w-full"></div>
             </div>
             <div className="w-2/12 p-4">
-              <button className="p-2 rounded-lg bg-green-100 bg-opacity-50 text-black shadow-lg bg-gray-200">Add +</button>
+              <button className="p-2 rounded-lg bg-opacity-50 text-black shadow-lg bg-gray-200">
+                Add +
+              </button>
             </div>
           </div>
         ))}
